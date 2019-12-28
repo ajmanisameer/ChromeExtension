@@ -1,6 +1,10 @@
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log("The color is green.");
-  });
+  console.log("ITS")
+  
+  chrome.storage.local.get(['key'], function(data) {
+    
+    //alert(data.key)
+    console.log(data.key)
+   })
 });
 
